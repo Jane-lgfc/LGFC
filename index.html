@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Under Construction / 網站建置中</title>
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-color: #f1f5f9;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        /* 頂部主要動態圖示 */
+        .main-icon {
+            font-size: 72px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        /* 進度條區塊 */
+        .progress-section {
+            max-width: 500px;
+            margin: 0 auto 50px auto;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            background-color: #e2e8f0;
+            border-radius: 20px;
+            height: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            width: 80%; /* 可自行調整進度百分比 */
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            border-radius: 20px;
+        }
+
+        .progress-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* 四語系網格佈局 */
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            text-align: left;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 40px;
+        }
+
+        .lang-box {
+            padding: 15px;
+            border-left: 4px solid var(--primary-color);
+            background: #fafafa;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .lang-box h2 {
+            font-size: 1.6rem;
+            margin: 0 0 8px 0;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .lang-box p {
+            font-size: 1rem;
+            margin: 0;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* 應對手機板螢幕的響應式設定 */
+        @media (max-width: 768px) {
+            .lang-grid {
+                grid-template-columns: 1fr; /* 在手機上變成單欄排列 */
+                gap: 20px;
+            }
+            .container {
+                padding: 30px 20px;
+            }
+        }
+
+        /* 輕微漂浮動畫 */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="main-icon">🚧</div>
+        
+        <div class="progress-section">
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="progress-text">80% Completed / 建設進度</div>
+        </div>
+
+        <div class="lang-grid">
+            
+            <div class="lang-box">
+                <h2>網站建置中</h2>
+                <p>我們正在努力為您打造全新的網站體驗，敬請期待！</p>
+            </div>
+
+            <div class="lang-box">
+                <h2>Under Construction</h2>
+                <p>We are working hard to bring you a brand new experience. Stay tuned!</p>
+            </div>
+
+            <div class="lang-box">
+                <h2>网站建置中</h2>
+                <p>我们正在努力为您打造全新的网站体验，敬请期待！</p>
+            </div>
+
+            <div class="lang-box">
+                <h2>En Construcción</h2>
+                <p>Estamos trabajando duro para ofrecerle una experiencia totalmente nueva. ¡Siga atento!</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
