@@ -1,164 +1,836 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Under Construction / 網站建置中</title>
-    <style>
-        :root {
-            --primary-color: #3b82f6;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --bg-color: #f1f5f9;
-            --card-bg: #ffffff;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .container {
-            max-width: 900px;
-            width: 100%;
-            background: var(--card-bg);
-            border-radius: 24px;
-            padding: 50px 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        /* 頂部主要動態圖示 */
-        .main-icon {
-            font-size: 72px;
-            margin-bottom: 20px;
-            animation: float 3s ease-in-out infinite;
-            display: inline-block;
-        }
-
-        /* 進度條區塊 */
-        .progress-section {
-            max-width: 500px;
-            margin: 0 auto 50px auto;
-        }
-
-        .progress-bar-container {
-            width: 100%;
-            background-color: #e2e8f0;
-            border-radius: 20px;
-            height: 10px;
-            overflow: hidden;
-            margin-bottom: 10px;
-        }
-
-        .progress-bar {
-            width: 80%; /* 可自行調整進度百分比 */
-            height: 100%;
-            background: linear-gradient(90deg, #3b82f6, #60a5fa);
-            border-radius: 20px;
-        }
-
-        .progress-text {
-            font-size: 14px;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        /* 四語系網格佈局 */
-        .lang-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            text-align: left;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 40px;
-        }
-
-        .lang-box {
-            padding: 15px;
-            border-left: 4px solid var(--primary-color);
-            background: #fafafa;
-            border-radius: 0 12px 12px 0;
-        }
-
-        .lang-box h2 {
-            font-size: 1.6rem;
-            margin: 0 0 8px 0;
-            color: var(--text-main);
-            font-weight: 700;
-        }
-
-        .lang-box p {
-            font-size: 1rem;
-            margin: 0;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
-
-        /* 應對手機板螢幕的響應式設定 */
-        @media (max-width: 768px) {
-            .lang-grid {
-                grid-template-columns: 1fr; /* 在手機上變成單欄排列 */
-                gap: 20px;
-            }
-            .container {
-                padding: 30px 20px;
-            }
-        }
-
-        /* 輕微漂浮動畫 */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-    </style>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="language" content="English, Chinese, Korean, Spanish">
+  <title>Life Garden for Children - Rowland Heights</title>
+  <meta name="description" content="Licensed family child care in Rowland Heights, CA. Warm, nurturing environment for infants, toddlers & preschoolers."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head> 
 <body>
 
+ <!-- <header>
     <div class="container">
-        <div class="main-icon">🚧</div>
+      <h1>Life Garden for Children Family Child Care</h1>
+      <div class="lang-switcher">
+  <select id="languageSelect" onchange="changeLanguage(this.value)">
+    <option value="en">English</option>
+    <option value="zh">中文 (Chinese)</option>
+    <option value="ko">한국어 (Korean)</option>
+    <option value="es">Español (Spanish)</option>
+  </select>
+</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#rates">Rates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header> -->
+
+  <header>
+  <div class="container header-content">
+    <div class="brand-wrapper">
+      <a href="/" class="logo-link">
+        <img src="Gallery/LifeGardenLogoTransparant.png" alt="Life Garden Logo" class="main-logo">
+      </a>
+      <h1 class="lang-text" 
+          data-en="Life Garden for Children Family Child Care" 
+          data-zh="生命園家庭幼兒教育中心" 
+          data-ko="라이프 가든 어린이 가족 보육" 
+          data-es="Guardería familiar Jardín de Vida para Niños">
+          Life Garden for Children Family Child Care
+      </h1>
+    </div>
+      
+      
+      <nav class= "nav-container"; style="display: flex; align-items: center; gap: 20px;">
+        <ul style="display: flex; list-style: none; gap: 15px;">
+
+          <li><a href="#about" class="lang-text" 
+               data-en="About" 
+               data-zh="關於我們"
+               data-ko="소개" 
+               data-es="Sobre nosotros">
+               About</a>
+           </li>
+          <li><a href="#programs" class="lang-text"
+               data-en="Program"
+               data-zh="課程安排"
+               data-ko="프로그램"
+               data-es="Programas">
+               Programs</a>
+          </li>
+            <li><a href="#gallery" class="lang-text"
+              data-en="Gallery"
+              data-zh="相簿"
+              data-ko="사진첩"
+              data-es="Galería">
+              Gallery</a>
+          </li>
+          <li><a href="#rates" class="lang-text"
+               data-en="Rates" 
+               data-zh="收費標準" 
+               data-ko="요금" 
+               data-es="Tarifas">
+               Rates</a>
+          </li>
         
-        <div class="progress-section">
-            <div class="progress-bar-container">
-                <div class="progress-bar"></div>
-            </div>
-            <div class="progress-text">80% Completed / 建設進度</div>
+          <li><a href="#contact" class="lang-text" 
+            data-en="Contact" 
+            data-zh="聯繫我們" 
+            data-ko="연락처"
+            data-es="Contacto">
+            Contact</a>
+          </li>
+        </ul>
+
+        <select id="languageSelect" onchange="changeLanguage(this.value)" style="padding: 5px; border-radius: 5px; font-family: inherit; cursor: pointer;">
+          <option value="en">English</option>
+          <option value="zh">繁體中文</option>
+          <option value="ko">한국어</option>
+          <option value="es">Español</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <!-- <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Welcome to a Home Away From Home</h2>
+      <p>Licensed family child care in Rowland Heights, California</p>
+      <p class="license">California Family Child Care License #198020497</p>
+      <p class="license">Schedule to operate in July 2026</p>
+      <a href="#contact" class="btn">Schedule a Tour Today</a>
+    </div>
+  </section> -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2 class="lang-text" 
+          data-en="Welcome to a Home Away From Home" 
+          data-zh="歡迎來到溫馨的幼兒教育之家" 
+          data-ko="또 하나의 집으로 오신 것을 환영합니다" 
+          data-es="Bienvenidos a un hogar fuera de casa">
+          Welcome to a Home Away From Home
+      </h2>
+      <p class="lang-text" 
+         data-en="Licensed family child care in Rowland Heights, California" 
+         data-zh="位於加州羅蘭崗的經認證家庭幼兒教育中心" 
+         data-ko="캘리포니아 롤랜드 하이츠의 면허가 있는 가정 보육" 
+         data-es="Cuidado infantil familiar con licencia en Rowland Heights, CA">
+         Licensed family child care in Rowland Heights, California
+      </p>
+      <p class="license lang-text" 
+         data-en="California Family Child Care License #198020497" 
+         data-zh="加州家庭托兒執照編號 #198020497" 
+         data-ko="캘리포니아 가정 보육 라이선스 #198020497" 
+         data-es="Licencia de cuidado infantil de California #198020497">
+         California Family Child Care License #198020497
+      </p>
+      <p class="license lang-text" 
+         data-en="Scheduled to operate in August 2026" 
+         data-zh="預計於 2026 年 8 月開始營運" 
+         data-ko="2026년 8 월 운영 예정" 
+         data-es="Programado para operar en agosto de 2026">
+         Scheduled to operate in August 2026
+      </p>
+      <a href="#contact" class="btn lang-text" data-en="Schedule a tour today" data-zh="聯絡我們" data-ko="문의하기" data-es="Quisiera programar una visita para hoy">Schedule a tour today</a>
+    </div>
+  </section>
+
+  
+  
+
+
+  <section id="about" class="section">
+    <!-- <div class="container">
+      <h2>About Jane</h2>
+      
+      <div class="about-content">
+         <div class="about-text">
+          <p>Hi, I'm Jane — a passionate, licensed childcare provider with over 3 years of hands-on experience nurturing young children. I previously worked at the Children Development Center at Mt. San Antonio College and a nonprofit Christian childcare organization, where I learned the joy of supporting each child's unique growth journey.</p>
+          <p>Children thrive best through meaningful, everyday interactions with caring people and a thoughtfully prepared environment. That's why I create a warm, enriching space at Life Garden for Children — with plenty of room to explore, play, and develop physically, emotionally, and cognitively. I choose materials and activities that celebrate each child's interests, cultural background, and individuality.</p>
+      
+          <p>In our small-group, home-based setting, every child feels truly seen, safe, secure, and excited to learn through joyful, play-based experiences. My goal is simple: to help your little one grow with confidence, curiosity, and kindness in a nurturing "garden" of care.</p>
+          <p>I'm honored to partner with families in creating those first joyful steps toward lifelong learning.</p>
+          
+          <h3>Why families choose Life Garden for Children</h3>
+          <ul>
+            <li>Fully licensed and background-checked for your peace of mind</li>
+            <li>Nutritious meals and snacks included every day</li>
+            <li>Spacious indoor play areas + a good size of backyard with daily outdoor time</li>
+            <li>Bilinqual language development support (English and Mandarin) </li>
+            <li>Using the DRDP (Desired Results Developmental Profile) — California's official tool — to track and support each child's developmental progress</li>
+            <li>Master's degree in Science</li>
+            <li>Child Development Site Supervisor permit currently in progress</li>
+          </ul>
+        </div>  -->
+        <div class="container">
+      <h2 class="lang-text" data-en="About Jane" data-zh="關於 Jane" data-ko="제인 소개" data-es="Sobre Jane">About Jane</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="lang-text" 
+             data-en="Hi, I'm Jane — a passionate, licensed childcare provider with over 3 years of hands-on experience nurturing young children. I previously worked at the Children Development Center at Mt. San Antonio College and a nonprofit Christian childcare organization, where I learned the joy of supporting each child's unique growth journey."
+             data-zh="你好, 我是 Jane——充滿熱忱、持有加州執照的幼教老師，擁有超過 3 年親身照顧幼兒的經驗。我曾在 Mt. San Antonio College 的幼教中心以及一個非營利的基督教幼兒園工作，學習應用專業幼教知識, 經歷每個孩子獨特成長歷程的喜悅。"
+             data-ko="안녕하세요, 저는 제인입니다 — 어린 아이들을 돌보는 데 열정을 가진, 자격증을 보유한 보육 제공자로서 3년 이상의 실무 경험을 가지고 있습니다. 이전에는 Mt. San Antonio College의 아동 발달 센터와 비영리 기독교 보육 기관에서 근무하며, 각 아이의 고유한 성장 여정을 지원하는 기쁨을 배웠습니다."
+             data-es="Hola, soy Jane — una proveedora de cuidado infantil apasionada y con licencia, con más de 3 años de experiencia práctica cuidando a niños pequeños. Anteriormente trabajé en el Children Development Center en Mt. San Antonio College y en una organización cristiana sin fines de lucro de cuidado infantil, donde aprendí la alegría de apoyar el viaje único de crecimiento de cada niño.">
+             Hi, I'm Jane — a passionate, licensed childcare educator with over 3 years of hands-on experience nurturing young children. I previously worked at the Children Development Center at Mt. San Antonio College and a nonprofit Christian childcare organization, where I learned the joy of supporting each child's unique growth journey.
+          </p>
+          <p class="lang-text" 
+            data-en="Children thrive best through meaningful, everyday interactions with caring people and a thoughtfully prepared environment. That's why I create a warm, enriching space at Life Garden for Children — with plenty of room to explore, play, and develop physically, emotionally, and cognitively. I choose materials and activities that celebrate each child's interests, cultural background, and individuality."
+            data-zh="孩子在有意義的日常互動中，與關愛他們的人以及經過精心準備的環境裡，才能得到最好的成長。因此，我在 Life Garden for Children  設計規劃了一個溫暖且富有啟發性的空間——提供孩子好奇自發探索、遊戲中學習的機會，幫助孩子在身體、情緒與認知上全面成長。我選擇能夠吸引每個孩子興趣、不同文化背景與獨特性的教材與活動。"
+            data-ko="아이들은 의미 있는 일상 속 상호작용을 통해, 따뜻하게 돌봐주는 사람들과 잘 준비된 환경 안에서 가장 잘 성장합니다. 그렇기 때문에 저는 Life Garden for Children에서 따뜻하고 풍요로운 공간을 만들고 있습니다. 아이들이 신체적, 정서적, 인지적으로 성장할 수 있도록 충분히 탐색하고 놀이하며 발달할 수 있는 공간을 제공합니다. 또한 각 아이의 관심사, 문화적 배경, 개성을 존중하고 이를 반영하는 교구와 활동을 선택합니다."
+            data-es="Los niños prosperan mejor a través de interacciones cotidianas significativas con personas que los cuidan y en un entorno cuidadosamente preparado. Por eso, en Life Garden for Children creo un espacio cálido y enriquecedor, con mucho lugar para explorar, jugar y desarrollarse física, emocional y cognitivamente. Elijo materiales y actividades que celebran los intereses, el trasfondo cultural y la individualidad de cada niño." >    
+          Children thrive best through meaningful, everyday interactions with caring people and a thoughtfully prepared environment. That's why I create a warm, enriching space at Life Garden for Children — with plenty of room to explore, play, and develop physically, emotionally, and cognitively. I choose materials and activities that celebrate each child's interests, cultural background, and individuality.
+          </p>
+
+           <p class="lang-text" 
+            data-en="In our small-group, home-based setting, every child feels truly seen, safe, secure, and excited to learn through joyful, play-based experiences. My goal is simple: to help your little one grow with confidence, curiosity, and kindness in a nurturing 'garden' of care."
+            data-zh="在我們小型、居家式的環境中，每個孩子都能真正被看見，感到安全、安心，並透過充滿喜悅、以遊戲為基礎的學習體驗而對學習充滿期待。我的目標很簡單：在這個充滿關愛的「  生命的園子」Life Garden 中，幫助您的孩子帶著自信、好奇心與善意茁壯成長。"
+            data-ko="우리의 소규모 가정형 환경에서 모든 아이는 진정으로 존중받고, 안전함을 느끼며, 놀이 중심의 즐거운 경험을 통해 배우는 것에 대한 기대감을 갖게 됩니다. 저의 목표는 단순합니다. 따뜻하게 보살피는 ‘정원’ 같은 환경 속에서 아이가 자신감, 호기심, 그리고 친절함을 가지고 성장하도록 돕는 것입니다."
+            data-es="En nuestro entorno pequeño y de tipo familiar, cada niño se siente verdaderamente visto, seguro y entusiasmado por aprender a través de experiencias alegres basadas en el juego. Mi objetivo es simple: ayudar a tu pequeño a crecer con confianza, curiosidad y amabilidad en un “jardín” de cuidado y apoyo." >    
+            In our small-group, home-based setting, every child feels truly seen, safe, secure, and excited to learn through joyful, play-based experiences. My goal is simple: to help your little one grow with confidence, curiosity, and kindness in a nurturing 'garden' of care."
+           </p>
+
+           <p class="lang-text" 
+              data-en="I'm honored to partner with families in creating those first joyful steps toward lifelong learning."
+              data-zh="我很榮幸能與家庭攜手合作，共同為孩子打造邁向終身學習的第一段快樂旅程。"
+              data-ko="저는 가족들과 함께 평생 학습으로 이어지는 첫 즐거운 발걸음을 만들어가는 데 동참할 수 있어 영광입니다."
+              data-es="Me siento honrado/a de colaborar con las familias para crear esos primeros pasos llenos de alegría hacia el aprendizaje para toda la vida." >
+            I'm honored to partner with families in creating those first joyful steps toward lifelong learning.
+            </p>
+
+        <h3 class="lang-text" 
+             data-en="Why families choose us" 
+             data-zh="為什麼家長選擇我們" 
+             data-ko="우리를 선택하는 이유"
+             data-es="Por qué elegirnos">
+             Why families choose us</h3>
+          <ul>
+          <li class="lang-text" 
+           data-en="Fully licensed and background-checked for your peace of mind"
+           data-zh="州政府認證並經過背景調查，讓您安心放心"
+           data-ko="안심하실 수 있도록 정식 라이선스를 보유하고 배경 조사를 완료했습니다" 
+           data-es="Con licencia completa y verificación de antecedentes para su tranquilidad" >
+            Fully licensed and background-checked for your peace of mind
+          </li>
+         
+          <li class="lang-text"
+            data-en="Nutritious meals and snacks included every day"
+            data-zh="每天提供包括營養均衡的餐點與點心"
+            data-ko="매일 영양가 있는 식사와 간식이 제공됩니다."
+            data-es="Se incluyen comidas y refrigerios nutritivos todos los días." >
+           Nutritious meals and snacks included every day
+          </li>
+          
+          <li class="lang-text"
+             data-en="Spacious indoor play areas + a good size of backyard with daily outdoor time"
+             data-zh="室內設有多功能的遊戲空間，加上敞開的後院，每天都有戶外活動時間"
+             data-ko="넓은 실내 놀이 공간과 충분한 크기의 뒤뜰이 있으며, 매일 야외 활동 시간이 포함되어 있습니다"
+             data-es="Amplias áreas de juego interiores y un patio trasero de buen tamaño, con tiempo diario al aire libre" >
+            Spacious indoor play areas + a good size of backyard with daily outdoor time
+            </li>
+            <li class="lang-text" 
+            data-en="Using the DRDP (Desired Results Developmental Profile) — California's official tool — to track and support each child's developmental progress" 
+            data-zh="使用 DRDP（期望成果發展評量表）——加州官方工具——來追蹤並輔助每位孩子的發展進程。" 
+            data-ko="캘리포니아의 공식 도구인 DRDP(Desired Results Developmental Profile)를 사용하여 각 아동의 발달 과정을 추적하고 지원합니다." 
+            data-es="Utilizando el DRDP (Perfil de Resultados de Desarrollo Deseados), la herramienta oficial de California, para seguir y apoyar el progreso del desarrollo de cada niño.">
+            Using the DRDP (Desired Results Developmental Profile) — California's official tool — to track and support each child's developmental progress
+            </li>
+
+            <li class="lang-text" 
+            data-en="Bilingual language development support (English/Mandarin)" 
+            data-zh="營造雙語環境（英語/普通話）"
+            data-ko="이중 언어 지원 (영어/중국어)" 
+            data-es="Apoyo bilingüe (inglés/mandarín)">
+            Bilingual support (English/Mandarin)
+          </li>
+            <li class="lang-text" 
+            data-en="Master's degree in Management Information Science" 
+            data-zh="碩士學位-IT資訊管理" 
+            data-ko="과학 석사 학위" 
+            data-es="Maestría en Ciencias">
+            Master's degree in Management Information Science
+           </li>
+           <li class="lang-text"
+            data-en="Child Development Site Supervisor permit currently in progress"
+            data-zh="目前正在申請兒童發展現場督導員（Child Development Site Supervisor）許可證"
+            data-ko="현재 아동 발달 현장 감독자 자격증(Child Development Site Supervisor permit) 취득 진행 중입니다."
+            data-es="Actualmente en proceso de obtención del permiso de supervisión de sitio de desarrollo infantil (Child Development Site Supervisor)." >
+            Child Development Site Supervisor permit currently in progress
+          </li>
+          </ul>
+
         </div>
-
-        <div class="lang-grid">
-            
-            <div class="lang-box">
-                <h2>網站建置中</h2>
-                <p>我們正在努力為您打造全新的網站體驗，敬請期待！</p>
-            </div>
-
-            <div class="lang-box">
-                <h2>Under Construction</h2>
-                <p>We are working hard to bring you a brand new experience. Stay tuned!</p>
-            </div>
-
-            <div class="lang-box">
-                <h2>网站建置中</h2>
-                <p>我们正在努力为您打造全新的网站体验，敬请期待！</p>
-            </div>
-
-            <div class="lang-box">
-                <h2>En Construcción</h2>
-                <p>Estamos trabajando duro para ofrecerle una experiencia totalmente nueva. ¡Siga atento!</p>
-            </div>
-
+        <div class="about-image">
+          <img src="Gallery/Jane-outdoor.jpg" 
+               alt="Jane smiling warmly in a nurturing play environment at Life Garden for Children" 
+               class="about-img">
         </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- <section id="programs" class="section alt-bg">
+    <div class="container">
+      <h2>Programs & Daily Rhythm</h2>
+      
+      <div class="programs-grid">
+        <div class="program-card">
+          <h3>Infants (0-18 months)</h3>
+          <p>Responsive, nurturing care • tummy time • sensory exploration • secure attachment building</p>
+        </div>
+        <div class="program-card">
+          <h3>Toddlers (18-36 months)</h3>
+          <p>Potty learning support • music & movement • simple crafts • language & social play</p>
+        </div>
+      </div>
+  
+      <h3>Sample Daily Schedule</h3>
+      <p style="text-align: center; font-style: italic; margin-bottom: 1.5rem;">(Flexible based on each child's needs and rhythms)</p>
+  
+      <table class="schedule">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7:30 – 8:30 AM</td>
+            <td>Welcome / Free Play / Diaper Change</td>
+          </tr>
+          <tr>
+            <td>8:30 – 9:00 AM</td>
+            <td>Breakfast</td>
+          </tr>
+          <tr>
+            <td>9:00 – 10:15 AM</td>
+            <td>Outdoor Play / Gross Motor</td>
+          </tr>
+          <tr>
+            <td>10:15 – 10:30 AM</td>
+            <td>Snack Time / Diaper Change</td>
+          </tr>
+          <tr>
+            <td>10:30 – 11:45 AM</td>
+            <td>Developmental Play</td>
+          </tr>
+          <tr>
+            <td>11:45 AM – 12:10 PM</td>
+            <td>Lunch</td>
+          </tr>
+          <tr>
+            <td>12:10 – 3:00 PM</td>
+            <td>Story Time / Diaper Change / Nap & Quiet Rest</td>
+          </tr>
+          <tr>
+            <td>3:00 – 3:30 PM</td>
+            <td>Snack Time / Circle Time</td>
+          </tr>
+          <tr>
+            <td>4:00 – 5:00 PM</td>
+            <td>Indoor / Outdoor Play Time</td>
+          </tr>
+          <tr>
+            <td>5:00 – 5:30 PM</td>
+            <td>Parents Arrive / Pick-up</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <p style="text-align: center; margin-top: 2rem; font-size: 0.95rem; color: #666;">
+        Note: Nap/quiet time may vary — some children nap longer while others enjoy quiet activities.
+      </p>
+    </div>
+  </section> -->
+<section id="programs" class="section alt-bg">
+  <div class="container">
+    <h2 class="lang-text" data-en="Programs & Daily Rhythm" data-zh="課程安排與每日作息" data-ko="프로그램 및 일과" data-es="Programas y ritmo diario">Programs & Daily Rhythm</h2>
+    
+    <div class="programs-grid">
+      <div class="program-card">
+        <h3 class="lang-text" data-en="Infants (0-18 months)" data-zh="嬰兒 (0-18 個月)" data-ko="영아 (0-18개월)" data-es="Bebés (0-18 meses)">Infants (0-18 months)</h3>
+        <p class="lang-text" 
+           data-en="Responsive, nurturing care • tummy time • sensory exploration • secure attachment building" 
+           data-zh="即時回應悉心照料 • 互動肢體運動時間 • 感官探索 • 建立安全依附關係" 
+           data-ko="반응형 육아 • 터미 타임 • 감각 탐색 • 안정적인 애착 형성" 
+           data-es="Cuidado receptivo y afectuoso • tiempo boca abajo • exploración sensorial • creación de vínculos seguros">
+           Responsive, nurturing care • tummy time • sensory exploration • secure attachment building
+        </p>
+      </div>
+      <div class="program-card">
+        <h3 class="lang-text" data-en="Toddlers (18-36 months)" data-zh="幼兒 (18-36 個月)" data-ko="유아 (18-36개월)" data-es="Niños pequeños (18-36 meses)">Toddlers (18-36 months)</h3>
+        <p class="lang-text" 
+           data-en="Potty learning support • music & movement • simple crafts • language & social play" 
+           data-zh="學習獨立如廁 • 音樂與律動 • 簡單手工 • 語言與社交遊戲" 
+           data-ko="배변 훈련 지원 • 음악 및 신체 활동 • 간단한 만들기 • 언어 및 사회성 놀이" 
+           data-es="Apoyo en el aprendizaje del baño • música y movimiento • manualidades sencillas • lenguaje y juego social">
+           Potty learning support • music & movement • simple crafts • language & social play
+        </p>
+      </div>
     </div>
 
+    <h3 class="lang-text" data-en="Sample Daily Schedule" data-zh="每日作息表範例" data-ko="일일 일과표 예시" data-es="Ejemplo de horario diario">Sample Daily Schedule</h3>
+    <p style="text-align: center; font-style: italic; margin-bottom: 1.5rem;" class="lang-text"
+       data-en="(Flexible based on each child's needs and rhythms)"
+       data-zh="（根據每個孩子的需求和節奏靈活調整）"
+       data-ko="(각 아동의 필요와 리듬에 따라 유동적으로 운영)"
+       data-es="(Flexible según las necesidades y ritmos de cada niño)">
+       (Flexible based on each child's needs and rhythms)
+    </p>
+
+    <table class="schedule">
+      <thead>
+        <tr>
+          <th class="lang-text" data-en="Time" data-zh="時間" data-ko="시간" data-es="Hora">Time</th>
+          <th class="lang-text" data-en="Activity" data-zh="活動內容" data-ko="활동" data-es="Actividad">Activity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>7:30 – 8:30 AM</td>
+          <td class="lang-text" data-en="Welcome / Free Play / Diaper Change" data-zh="入園歡迎 / 自由活動 / 更換尿布" data-ko="등원 및 환영 / 자유 놀이 / 기저귀 교체" data-es="Bienvenida / Juego libre / Cambio de pañal">Welcome / Free Play / Diaper Change</td>
+        </tr>
+        <tr>
+          <td>8:30 – 9:00 AM</td>
+          <td class="lang-text" data-en="Breakfast" data-zh="早餐時間" data-ko="아침 식사" data-es="Desayuno">Breakfast</td>
+        </tr>
+        <tr>
+          <td>9:00 – 10:15 AM</td>
+          <td class="lang-text" data-en="Outdoor Play / Gross Motor" data-zh="戶外活動 / 大肌肉運動" data-ko="야외 놀이 / 대근육 활동" data-es="Juego al aire libre / Motricidad gruesa">Outdoor Play / Gross Motor</td>
+        </tr>
+        <tr>
+          <td>10:15 – 10:30 AM</td>
+          <td class="lang-text" data-en="Snack Time / Diaper Change" data-zh="點心時間 / 更換尿布" data-ko="간식 시간 / 기저귀 교체" data-es="Merienda / Cambio de pañal">Snack Time / Diaper Change</td>
+        </tr>
+        <tr>
+          <td>10:30 – 11:45 AM</td>
+          <td class="lang-text" data-en="Developmental Play" data-zh="適性啟發活動遊戲" data-ko="발달 놀이" data-es="Juego de desarrollo">Developmental Play</td>
+        </tr>
+        <tr>
+          <td>11:45 AM – 12:10 PM</td>
+          <td class="lang-text" data-en="Lunch" data-zh="午餐時間" data-ko="점심 식사" data-es="Almuerzo">Lunch</td>
+        </tr>
+        <tr>
+          <td>12:10 – 3:00 PM</td>
+          <td class="lang-text" data-en="Story Time / Diaper Change / Nap & Quiet Rest" data-zh="故事時間 / 更換尿布 / 午睡與安靜休息" data-ko="구연동화 / 기저귀 교체 / 낮잠 및 휴식" data-es="Hora del cuento / Cambio de pañal / Siesta y descanso">Story Time / Diaper Change / Nap & Quiet Rest</td>
+        </tr>
+        <tr>
+          <td>3:00 – 3:30 PM</td>
+          <td class="lang-text" data-en="Snack Time / Circle Time" data-zh="點心時間 / 團體活動時間" data-ko="간식 시간 / 서클 타임" data-es="Merienda / Tiempo de círculo">Snack Time / Circle Time</td>
+        </tr>
+        <tr>
+          <td>4:00 – 5:00 PM</td>
+          <td class="lang-text" data-en="Indoor / Outdoor Play Time" data-zh="室內或戶外遊戲時間" data-ko="실내/실외 놀이 시간" data-es="Tiempo de juego interior o exterior">Indoor / Outdoor Play Time</td>
+        </tr>
+        <tr>
+          <td>5:00 – 5:30 PM</td>
+          <td class="lang-text" data-en="Parents Arrive / Pick-up" data-zh="家長抵達 / 接送時間" data-ko="귀가 및 하원" data-es="Llegada de padres / Recogida">Parents Arrive / Pick-up</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="text-align: center; margin-top: 2rem; font-size: 0.95rem; color: #666;" class="lang-text"
+       data-en="Note: Nap/quiet time may vary — some children nap longer while others enjoy quiet activities."
+       data-zh="註：午睡/安靜休息時間視情況而定 — 有些孩子睡得較久，而有些孩子則喜歡安靜活動。"
+       data-ko="참고: 낮잠/휴식 시간은 다를 수 있습니다. 어떤 아이들은 더 오래 자고, 어떤 아이들은 조용한 활동을 즐깁니다."
+       data-es="Nota: El tiempo de siesta/descanso puede variar; algunos niños duermen más tiempo mientras que otros disfrutan de actividades tranquilas.">
+      Note: Nap/quiet time may vary — some children nap longer while others enjoy quiet activities.
+    </p>
+  </div>
+</section>
+
+ <!-- <section id="gallery" class="section alt-bg"></section>
+  <div class="container">
+      <h2>Gallery</h2>
+      
+  <div class="gallery-grid">
+    <img src="Gallery/Gross motor Development.jpg" alt="Bright playroom with toys and learning areas">
+    <img src="Gallery/Tummy Time.jpg" alt="Large backyard with play structures and open space">
+    <img src="Gallery/Art-Creative Development.jpg" alt="Children doing creative art activity">
+    <img src="Gallery/Literacy Development.jpg" alt="Cozy story time circle">
+  </div>
+  </div>
+  </section> -->
+ <<section id="gallery" class="section alt-bg">
+  <div class="container">
+    <h2 class="lang-text" 
+        data-en="Gallery" 
+        data-zh="圖集相冊" 
+        data-ko="갤러리" 
+        data-es="Galería"
+        style="margin-bottom: 3rem; text-align: center;">
+        Gallery
+    </h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <p class="lang-text" data-en="Gross Motor Development" data-zh="大肌肉運動發展" data-ko="대근육 발달" data-es="Desarrollo de la motricidad gruesa">
+           Gross Motor Development
+        </p>
+        <div class="photo-wrapper">
+          <img src="Gross motor Development.jpg" alt="Gross Motor">
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <p class="lang-text" data-en="Tummy Time" data-zh="俯臥時間 (Tummy Time)" data-ko="터미 타임" data-es="Tiempo boca abajo">
+           Tummy Time
+        </p>
+        <div class="photo-wrapper">
+          <img src="Tummy Time.jpg" alt="Tummy Time">
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <p class="lang-text" data-en="Art & Creative Development" data-zh="藝術與創意發展" data-ko="예술 및 창의력 발달" data-es="Desarrollo artístico">
+           Art & Creative Development
+        </p>
+        <div class="photo-wrapper">
+          <img src="Art-Creative Development.jpg" alt="Art Development">
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <p class="lang-text" data-en="Literacy Development" data-zh="讀寫能力發展" data-ko="문해력 발달" data-es="Alfabetización">
+           Literacy Development
+        </p>
+        <div class="photo-wrapper">
+          <img src="Literacy Development.jpg" alt="Literacy Development">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   
+  <!--<section id="rates" class="section alt-bg">
+    <div class="container">
+      <h2>Transparent Rates</h2>
+      
+      <div class="rates-grid">
+        <div class="rate-card">
+          <h3>Full Time (5 days/week)</h3>
+          <p class="price">Weekly: $290 – $340</p>
+          <p>Monthly: $1100 – $1300</p>
+          <p class="small">First priority for enrollment</p>
+        </div>
+        
+        <div class="rate-card">
+          <h3>Part Time (4 days/week)</h3>
+          <p class="price">Weekly: $235 – $285</p>
+          <p>Monthly: $900 – $1100</p>
+        </div>
+        
+        <div class="rate-card">
+          <h3>Part Time (3 days/week)</h3>
+          <p class="price">Weekly: $185 – $230</p>
+          <p>Monthly: $700 – $900</p>
+        </div>
+        
+        <div class="rate-card">
+          <h3>Part Time (2 days/week)</h3>
+          <p class="price">Weekly: $135 – $175</p>
+          <p>Monthly: $500 – $700</p>
+        </div>
+        
+        <div class="rate-card">
+          <h3>Hourly Rate</h3>
+          <p class="price">$12 / hour</p>
+          <p>(minimum 5 hours)</p>
+        </div>
+        
+        <div class="rate-card">
+          <h3>Registration Fee</h3>
+          <p class="price">$100 (one-time)</p>
+        </div>
+      </div> -->
+
+      <section id="rates" class="section alt-bg">
+    <div class="container">
+      <h2 class="lang-text" data-en="Transparent Rates" data-zh="透明收費標準" data-ko="투명한 요금" data-es="Tarifas transparentes">Transparent Rates</h2>
+      <div class="rates-grid">
+        <div class="rate-card">
+    <h3 class="lang-text" 
+        data-en="Full Time (5 days/week)" 
+        data-zh="ㄧ周全滿 (每週 5 天)" 
+        data-ko="풀타임 (주 5일)" 
+        data-es="Tiempo completo (5 días/semana)">
+        Full Time (5 days/week)
+    </h3>
+    <p class="price">
+      <span class="lang-text" data-en="Weekly:" data-zh="每週：" data-ko="주당:" data-es="Semanal:">Weekly:</span> $290 – $340
+    </p>
+    <p>
+      <span class="lang-text" data-en="Monthly:" data-zh="每月：" data-ko="월간:" data-es="Mensual:">Monthly:</span> $1100 – $1300
+    </p>
+    <p class="small lang-text" 
+       data-en="First priority for enrollment" 
+       data-zh="優先錄取" 
+       data-ko="최우선 등록 순위" 
+       data-es="Prioridad para la inscripción">
+       First priority for enrollment
+    </p>
+  </div>
+
+  <div class="rate-card">
+    <h3 class="lang-text" 
+        data-en="Part Time (4 days/week)" 
+        data-zh="ㄧ週不滿 (每週 4 天)" 
+        data-ko="파트타임 (주 4일)" 
+        data-es="Tiempo parcial (4 días/semana)">
+        Part Time (4 days/week)
+    </h3>
+    <p class="price">
+      <span class="lang-text" data-en="Weekly:" data-zh="每週：" data-ko="주당:" data-es="Semanal:">Weekly:</span> $235 – $285
+    </p>
+    <p>
+      <span class="lang-text" data-en="Monthly:" data-zh="每月：" data-ko="월간:" data-es="Mensual:">Monthly:</span> $900 – $1100
+    </p>
+  </div>
+
+  <div class="rate-card">
+    <h3 class="lang-text" 
+        data-en="Part Time (3 days/week)" 
+        data-zh="ㄧ週不滿 (每週 3 天)" 
+        data-ko="파트타임 (주 3일)" 
+        data-es="Tiempo parcial (3 días/semana)">
+        Part Time (3 days/week)
+    </h3>
+    <p class="price">
+      <span class="lang-text" data-en="Weekly:" data-zh="每週：" data-ko="주당:" data-es="Semanal:">Weekly:</span> $185 – $230
+    </p>
+    <p>
+      <span class="lang-text" data-en="Monthly:" data-zh="每月：" data-ko="월간:" data-es="Mensual:">Monthly:</span> $700 – $900
+    </p>
+  </div>
+
+  <div class="rate-card">
+    <h3 class="lang-text" 
+        data-en="Part Time (2 days/week)" 
+        data-zh="ㄧ週不滿 (每週 2 天)" 
+        data-ko="파트타임 (주 2일)" 
+        data-es="Tiempo parcial (2 días/semana)">
+        Part Time (2 days/week)
+    </h3>
+    <p class="price">
+      <span class="lang-text" data-en="Weekly:" data-zh="每週：" data-ko="주당:" data-es="Semanal:">Weekly:</span> $135 – $175
+    </p>
+    <p>
+      <span class="lang-text" data-en="Monthly:" data-zh="每月：" data-ko="월간:" data-es="Mensual:">Monthly:</span> $500 – $700
+    </p>
+  </div>
+
+  <div class="rate-card">
+    <h3 class="lang-text" data-en="Hourly Rate" data-zh="時薪制" data-ko="시간당 요금" data-es="Tarifa por hora">Hourly Rate</h3>
+    <p class="price">$12 / <span class="lang-text" data-en="hour" data-zh="小時" data-ko="시간" data-es="hora">hour</span></p>
+    <p class="lang-text" data-en="(minimum 5 hours)" data-zh="(最少 5 小時)" data-ko="(최소 5시간)" data-es="(mínimo 5 horas)">(minimum 5 hours)</p>
+  </div>
+
+  <div class="rate-card">
+    <h3 class="lang-text" data-en="Registration Fee" data-zh="註冊費" data-ko="등록비" data-es="Cuota de inscripción">Registration Fee</h3>
+    <p class="price">$100</p>
+    <p class="lang-text" data-en="(one-time)" data-zh="(一次性)" data-ko="(1회)" data-es="(pago único)">(one-time)</p>
+  </div>
+    </div>
+    </div>
+  
+  
+      <!--<div class="rates-notes" style="text-align: center; margin-top: 2rem; font-size: 0.95rem; color: #555;">
+        <p><strong>Note:</strong> Full-time enrollment has first priority.</p>
+        <p>For family child care setting:</p>
+        <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+          <li>Infants (0–24 months)</li>
+          <li>Toddlers (above 24 months to 36 months)</li>
+        </ul>
+        <p>Fees include nutritious meals and snacks every day.</p>
+        <p>Formula, diapers, and wipes are not included (please provide your own).</p>
+        <p>Per day rates (approximate): $80 – $100 (based on full-time weekly average)</p>
+        <p>Rates effective as of 2026 – please contact for availability, sibling discounts, or exact monthly calculations.</p>
+      </div> -->
+  <div class="rates-notes" style="text-align: center; margin-top: 2rem; font-size: 0.95rem; color: #555;">
+  <p>
+    <strong class="lang-text" data-en="Note:" data-zh="註：" data-ko="참고:" data-es="Nota:">Note:</strong> 
+    <span class="lang-text" 
+          data-en="Full-time enrollment has first priority." 
+          data-zh="ㄧ周五天學生擁有優先錄取權。" 
+          data-ko="풀타임 등록이 우선순위입니다." 
+          data-es="La inscripción a tiempo completo tiene prioridad.">
+          Full-time enrollment has first priority.
+    </span>
+  </p>
+
+  <p class="lang-text" data-en="For family child care setting:" data-zh="家庭幼兒教育中心分類：" data-ko="가정 보육 설정 기준:" data-es="Para el entorno de cuidado infantil familiar:">
+    For family child care setting:
+  </p>
+
+  <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+    <li class="lang-text" 
+        data-en="Infants (0–24 months)" 
+        data-zh="嬰兒 (0–24 個月)" 
+        data-ko="영아 (0–24개월)" 
+        data-es="Bebés (0–24 meses)">
+        Infants (0–24 months)
+    </li>
+    <li class="lang-text" 
+        data-en="Toddlers (above 24 months to 36 months)" 
+        data-zh="幼兒 (24個月以上至36個月)" 
+        data-ko="유아 (24개월 이상 ~ 36개월)" 
+        data-es="Niños pequeños (más de 24 meses a 36 meses)">
+        Toddlers (above 24 months to 36 months)
+    </li>
+  </ul>
+
+  <p class="lang-text" 
+     data-en="Fees include nutritious meals and snacks every day." 
+     data-zh="費用包含每日營養餐點與點心。" 
+     data-ko="요금에는 매일 영양가 있는 식사와 간식이 포함되어 있습니다." 
+     data-es="Las tarifas incluyen comidas nutritivas y meriendas todos los días.">
+     Fees include nutritious meals and snacks every day.
+  </p>
+
+  <p class="lang-text" 
+     data-en="Formula, diapers, and wipes are not included (please provide your own)." 
+     data-zh="不包含配方奶、尿布和濕紙巾（請自行備妥）。" 
+     data-ko="분유, 기저귀, 물티슈는 포함되어 있지 않습니다 (직접 준비해 주세요)." 
+     data-es="No se incluyen fórmulas, pañales ni toallitas (por favor, proporcione los suyos propios).">
+     Formula, diapers, and wipes are not included (please provide your own).
+  </p>
+
+  <p class="lang-text" 
+     data-en="Per day rates (approximate): $80 – $100 (based on full-time weekly average)" 
+     data-zh="每日費率（約）：$80 – $100（依全日制每週平均計算）" 
+     data-ko="일일 요금 (대략): $80 – $100 (풀타임 주간 평균 기준)" 
+     data-es="Tarifas por día (aproximadas): $80 – $100 (basado en el promedio semanal de tiempo completo)">
+     Per day rates (approximate): $80 – $100 (based on full-time weekly average)
+  </p>
+
+  <p class="lang-text" 
+     data-en="Rates effective as of 2026 – please contact for availability, sibling discounts, or exact monthly calculations." 
+     data-zh="費率於 2026 年生效 — 請聯繫以瞭解名額、兄弟姐妹折扣或確切的每月費用計算。" 
+     data-ko="요금은 2026년부터 적용됩니다. 가용 여부, 형제 자매 할인 또는 정확한 월간 계산은 문의해 주세요." 
+     data-es="Tarifas vigentes a partir de 2026; comuníquese para conocer la disponibilidad, los descuentos para hermanos o los cálculos mensuales exactos.">
+     Rates effective as of 2026 – please contact for availability, sibling discounts, or exact monthly calculations.
+  </p>
+</div>
+
+    </div>
+  </section>
+
+<!-- section class="section">
+    <div class="container">
+      <h2>What Parents Say</h2>
+      <div class="testimonials-grid">
+        <blockquote>
+          <p>"Jane is amazing — my son lights up every morning!"</p>
+          <cite>— Maria, mom of 2-year-old</cite>
+        </blockquote>
+        <blockquote>
+          <p>"The best home care we've ever found. Highly recommend!"</p>
+          <cite>— David & Sofia</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section id="contact" class="section contact-section">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p>First time caller, please text first: (626) 474-8186</p>
+    <p>Email: lifegarden91748@gmail.com</p>
+    <p>Rowland Heights, CA 91748</p>
+
+    <form action="https://formsubmit.co/lifegarden91748@gmail.com" method="POST" class="contact-form">
+      
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+      
+      <input type="hidden" name="_captcha" value="false">
+
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Email" required/>
+      <input type="tel" name="phone" placeholder="Phone" required/>
+      <textarea name="message" placeholder="Message — e.g., interested in infant spot starting June" rows="5" required></textarea>
+      
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section> -->
+
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p>First time caller, please text first: (626) 474-8186</p>
+    <p>Email: <a href="mailto:lifegarden91748@gmail.com" style="color: white; text-decoration: underline;">lifegarden91748@gmail.com</a></p>
+    <p>Rowland Heights, CA 91748</p>
+
+    <div class="contact-box">
+      <p>Click the button below to send us an email regarding enrollment or to schedule a tour.</p>
+      <br>
+      <a href="mailto:lifegarden91748@gmail.com?subject=Inquiry%20for%20Life%20Garden%20Child%20Care&body=Hi%20Jane,%0D%0A%0D%0AI%20am%20interested%20in%20learning%20more%20about%20your%20child%20care%20services.%0D%0A%0D%0AChild's%20Age:%0D%0ADesired%20Start%20Date:%0D%0AMy%20Phone%20Number:" 
+         class="btn">
+         Send Message via Email
+      </a>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Life Garden for Children Family Child Care • Licensed by California CDSS</p>
+      <p><a href="#">Privacy Policy</a> • <a href="#">Photo Permissions</a></p>
+    </div>
+  </footer>
+
+<script>
+    function changeLanguage(lang) {
+      // Update all elements with the lang-text class
+      const elements = document.querySelectorAll('.lang-text');
+      elements.forEach(el => {
+        const translation = el.getAttribute(`data-${lang}`);
+        if (translation) {
+          el.textContent = translation;
+        }
+      });
+
+      // Update the mailto link subject and body per language
+      const emailBtn = document.getElementById('emailBtn');
+      let subject = "Inquiry for Life Garden";
+      let body = "Child's Age:%0D%0ADesired Start Date:";
+
+      if (lang === 'zh') {
+        subject = "生命花園托兒所諮詢";
+        body = "孩子年齡:%0D%0A預計入學日期:";
+      } else if (lang === 'ko') {
+        subject = "보육 문의";
+        body = "아이 나이:%0D%0A희망 시작일:";
+      } else if (lang === 'es') {
+        subject = "Consulta de cuidado infantil";
+        body = "Edad del niño:%0D%0AFecha de inicio:";
+      }
+
+      emailBtn.href = `mailto:lifegarden91748@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      // Save user preference
+      localStorage.setItem('preferredLanguage', lang);
+    }
+
+    // Initialize the page with English or saved preference
+    window.onload = () => {
+      const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+      document.getElementById('languageSelect').value = savedLang;
+      changeLanguage(savedLang);
+    };
+  </script>
+  
 </body>
 </html>

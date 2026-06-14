@@ -1,0 +1,721 @@
+:root {
+  --primary: #5ab95a;      /* soft garden green */
+  --accent: #f4a261;       /* warm peach/orange (keep your button color) */
+  --secondary: #4a90e2;    /* keep some blue for trust/calm */
+  --warm: #fff8e8;         /* very light cream background for sections */
+  --text: #2d3748;
+  h2 { color: #556B2F; }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: #ffffff; /* Or match the cream color of the logo */
+}
+
+.main-logo {
+  height: 80px; /* Adjust size as needed */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.main-logo:hover {
+  transform: scale(1.05); /* Subtle grow effect on hover */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  }
+
+
+header {
+  background: #556B2F;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover { text-decoration: underline; }
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+              url('https://sfchildrennature.org/wp-content/uploads/DeliasLittleAngels6-1024x683.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 140px 20px;  /* Slightly taller for impact */
+  background-color: #556B2F;  /* fallback olive drab if image fails */
+}
+
+.hero h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.license {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 1.2rem 0;
+}
+
+/* Optional: add subtle leaf accent or keep clean */
+
+.alt-bg { background: #f9f9f9; }
+
+h2 { color: var(--primary); }
+
+.about-grid, .programs-grid, .rates-grid, .testimonials-grid, .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.program-card, .rate-card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.price { font-size: 2rem; color: #e76f51; font-weight: 600; }
+
+.schedule {
+  width: 100%;
+  max-width: 700px;                /* Slightly narrower for better readability */
+  margin: 2rem auto;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.schedule th,
+.schedule td {
+  border: 1px solid #ddd;
+  padding: 14px 16px;              /* More comfortable padding */
+  text-align: left;
+}
+
+.schedule th {
+  background: #f0f8f8;             /* Soft light teal/gray background for header */
+  font-weight: 600;
+  color: #2d3748;
+  text-align: center;              /* Center times and activities in header */
+}
+
+.schedule td:first-child {
+  font-weight: 500;
+  width: 35%;                      /* Give time column more space */
+  white-space: nowrap;
+}
+
+.schedule tr:nth-child(even) {
+  background: #fafafa;             /* Subtle zebra striping */
+}
+
+.gallery-grid div, .about-img-placeholder {
+  height: 220px;
+  background: #eee;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-style: italic;
+}
+
+.testimonials-grid blockquote {
+  background: #fff;
+  padding: 1.8rem;
+  border-left: 5px solid #4a90e2;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 0.8rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+.contact-section { 
+  background: var(--primary); /* Uses your soft garden green #5ab95a */
+  color: white; 
+  text-align: center; 
+}
+.contact-section h2 { color: white; }
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+}
+
+footer a { color: #4a90e2; text-decoration: none; }
+.about-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  object-fit: cover;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .about-img {
+    max-width: 100%;
+  }
+}v
+
+@media (max-width: 768px) {
+  header nav ul { flex-direction: column; align-items: center; gap: 1rem; }
+  .hero { padding: 80px 20px; }
+  .hero h2 { font-size: 2.4rem; }
+}
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;          /* two equal columns by default */
+  gap: 3rem;                               /* nice breathing room between text & image */
+  align-items: start;                      /* align tops if text is longer */
+}
+
+..about-text {
+  max-width: 900px;                /* optional: keeps long text from stretching too wide on desktop */
+  margin: 0 auto 3rem auto;        /* space below text before image */
+  line-height: 1.7;
+}
+
+.about-text h3 {
+  margin: 2rem 0 1rem;
+  color: var(--primary, #5ab9b2);  /* your brand color if set */
+  font-size: 1.6rem;
+}
+
+.about-text ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.about-text ul li {
+  margin-bottom: 0.9rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.about-text ul li::before {
+  content: "🌱";                   /* garden bullet - feel free to change to ✓ or • */
+  position: absolute;
+  left: 0;
+  color: var(--primary, #5ab9b2);
+}
+
+.about-image {
+  text-align: center;              /* centers the image */
+  margin-top: 2rem;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 500px;                /* prevents it from getting too large on wide screens */
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+  object-fit: cover;
+  height: auto;
+}
+
+/* Mobile adjustments - already stacks naturally since it's sequential */
+@media (max-width: 768px) {
+  .about-img {
+    max-width: 380px;              /* slightly smaller on phone for better fit */
+  }
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;           /* one column */
+    gap: 2.5rem;
+  }
+  
+  .about-image {
+    text-align: center;                   /* center image on mobile */
+  }
+  
+  .about-img {
+    max-width: 380px;                     /* cap width so it's not too huge */
+    margin: 0 auto;
+  }
+}
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-text {
+  line-height: 1.7;
+}
+
+.about-text h3 {
+  margin: 2rem 0 1rem;
+  color: #4a90e2;  /* or pick a garden green like #5ab95a if you want more nature feel */
+  font-size: 1.6rem;
+}
+
+.about-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-text ul li {
+  margin-bottom: 0.9rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.about-text ul li::before {
+  content: "🌱";  /* garden theme bullet */
+  position: absolute;
+  left: 0;
+  color: #5ab95a;  /* soft green */
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .about-image {
+    text-align: center;
+  }
+  
+  .about-img {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.rates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.rate-card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.rate-card .price {
+  font-size: 1.9rem;
+  color: #556B2F;  /* olive drab for consistency */
+  font-weight: 700;
+  margin: 0.8rem 0;
+}
+
+.rate-card .small {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+.rates-notes ul li {
+  margin: 0.4rem 0;
+  font-weight: 500;
+}
+
+/*section {
+  padding-top: 120px;
+}*/
+section {
+  /* This tells the browser to stop scrolling 120px BEFORE the element */
+  /* Adjust 120px to match the actual height of your mobile header */
+  scroll-margin-top: 120px; 
+  padding: 40px 20px; 
+}
+
+.contact-box {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1); /* Subtle overlay effect */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-section .btn {
+  background: var(--accent);
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.contact-section .btn:hover {
+  background: #e76f51;
+  transform: scale(1.05);
+}
+
+.lang-switcher {
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.lang-switcher select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Adjust header to fit switcher on mobile */
+@media (max-width: 768px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lang-switcher {
+    margin: 10px 0;
+  }
+}
+.gallery-item p {
+  margin-bottom: 8px; /* Adds space between the title and the image */
+  font-weight: 500;   /* Makes the label slightly bolder */
+  text-align: center;
+}
+
+/* Gallery Item Container */
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem; /* Space between rows of photos */
+}
+
+/* Space between the word and the photo */
+.gallery-item p {
+  margin-bottom: 15px; /* Adjust this number to increase/decrease space */
+  font-weight: 500;
+  color: #556B2F;      /* Matching your olive green theme */
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 8px;  /* Optional: gives photos a softer look */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: makes photos "pop" */
+}
+
+/* Prevent the Gallery Title from hitting the photos */
+#gallery h2 {
+  margin-bottom: 40px; 
+}
+
+/* Ensure the Section doesn't hide under the fixed Header when clicking "Gallery" */
+#gallery {
+  scroll-margin-top: 100px; /* Adjust based on your header height */
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Style for the labels above the photos */
+.gallery-item p {
+  margin-bottom: 15px; /* Space between the text and the photo below it */
+  font-weight: 600;
+  color: #556B2F;
+  text-align: center;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/* Ensure the grid doesn't squash items together */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px 20px; /* 40px space between rows, 20px between columns */
+  align-items: start;
+}
+
+/* Group text and photo so they move together */
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* The space between the word and the photo below it */
+.gallery-item p {
+  margin-bottom: 12px; 
+  font-weight: 600;
+  text-align: center;
+  color: #556B2F;
+  min-height: 2.5em; /* Ensures labels with 2 lines don't push photos out of alignment */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Ensure images fit their container and don't overlap */
+.gallery-item img {
+  width: 100%;
+  height: 200px; /* Set a fixed height to keep the grid perfectly even */
+  object-fit: cover; /* This crops the photo to fit the box without stretching it */
+  border-radius: 8px;
+  display: block;
+}
+
+/* Container for the whole header content */
+.header-flex {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap;
+}
+
+/* Grouping Logo and Text */
+.logo-title-group {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between logo and text */
+}
+
+.main-logo {
+  height: 120px; /* Adjusted size to fit better next to text */
+  width: auto;
+  border-radius: 50%; /* Keeps the circular look clean */
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.main-logo:hover {
+  transform: scale(1.1);
+}
+
+header h1 {
+  font-size: 1.4rem; /* Slightly smaller to fit on one line with logo */
+  line-height: 1.2;
+}
+
+/* Navigation layout */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .logo-title-group {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  header h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* --- Header Layout for Desktop/Mac --- */
+header {
+  background: #556B2F;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Critical for wrapping on small screens */
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.main-logo {
+  height: 100px; /* Enlarged as requested */
+  width: auto;
+  border-radius: 50%;
+  display: block;
+}
+
+header h1 {
+  font-size: 1.4rem; /* Adjusted for better fit */
+  margin: 0;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+/* --- Mobile Compatibility (iPhone & Android) --- */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column; /* Stacks everything vertically */
+    text-align: center;
+  }
+
+  .brand-wrapper {
+    flex-direction: column; 
+    margin-bottom: 15px;
+  }
+
+  .main-logo {
+    height: 80px; /* Scales down slightly for phones */
+  }
+
+  header h1 {
+    font-size: 1.1rem;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    padding: 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Tablet Compatibility (iPad) --- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 1.2rem;
+    max-width: 300px; /* Keeps text from pushing the menu off-screen */
+  }
+}
+
+/* Fix for overlapping header when navigating links */
+/*section {
+  padding: 60px 0; /* Standard padding for sections 
+  scroll-margin-top: 120px; /* This creates the buffer so headers don't overlap text 
+}*/
+section {
+  /* This tells the browser to stop scrolling 120px BEFORE the element */
+  /* Adjust 120px to match the actual height of your mobile header */
+  scroll-margin-top: 120px; 
+  padding: 40px 20px; 
+}
+
+
+/* Specific fix for the Gallery if it has unique spacing */
+#gallery {
+  scroll-margin-top: 120px; 
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+#about, #programs, #gallery, #rates, #contact {
+  scroll-margin-top: 250px; /* Slightly more room for headers with multiple lines */
+}
+/* Ensure the header has a consistent height across browsers */
+header {
+  background: #556B2F;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
