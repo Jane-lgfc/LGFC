@@ -1,0 +1,14 @@
+{
+    "rewrites": [
+        {
+            "source": "/",
+            "destination": "/maintenance.html",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "yourdomain.com"
+                }
+            ]
+        }
+    ]
+}
