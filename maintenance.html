@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網站維護中 | Maintenance</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .icon { font-size: 64px; margin-bottom: 20px; }
+        h1 { margin-bottom: 30px; color: #0f172a; }
+        
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: left;
+        }
+        .lang-item { padding: 10px; border-left: 3px solid #3b82f6; background: #f8fafc; }
+        .lang-title { font-weight: bold; margin-bottom: 4px; display: block; color: #334155; }
+        .lang-text { font-size: 0.9rem; color: #64748b; }
+
+        @media (max-width: 600px) {
+            .lang-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">🛠️</div>
+        <h1>系統維護中</h1>
+        
+        <div class="lang-grid">
+            <div class="lang-item">
+                <span class="lang-title">繁體中文</span>
+                <span class="lang-text">網站維護中，我們正在進行系統升級。</span>
+            </div>
+            <div class="lang-item">
+                <span class="lang-title">English</span>
+                <span class="lang-text">Under maintenance. We are performing system upgrades.</span>
+            </div>
+            <div class="lang-item">
+                <span class="lang-title">Español</span>
+                <span class="lang-text">En mantenimiento. Estamos realizando actualizaciones del sistema.</span>
+            </div>
+            <div class="lang-item">
+                <span class="lang-title">한국어</span>
+                <span class="lang-text">시스템 점검 중입니다. 서비스 개선을 위해 작업 중입니다.</span>
+            </div>
+        </div>
+        
+        <p style="margin-top: 30px; color: #94a3b8; font-size: 0.85rem;">
+            &copy; 2026 LGFC Team. All Rights Reserved.
+        </p>
+    </div>
+
+</body>
+</html>
